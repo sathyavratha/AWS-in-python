@@ -1,0 +1,49 @@
+import random
+
+def generate_number():
+    return str(random.randint(1000, 9999))
+
+def get_cows_and_bulls(secret, guess):
+    cows = 0
+    bulls = 0
+    secret_dict = {}
+    guess_dict = {}
+
+    # Count cows
+    for i in range(4):
+        if secret[i] == guess[i]:
+            cows += 1
+        else:
+            secret_dict[secret[i]] = secret_dict.get(secret[i], 0) + 1
+            guess_dict[guess[i]] = guess_dict.get(guess[i], 0) + 1
+
+    # Count bulls
+    for digit in guess_dict:
+        if digit in secret_dict:
+            bulls += min(secret_dict[digit], guess_dict[digit])
+
+    return cows, bulls
+
+def cows_and_bulls_game():
+    secret_number = generate_number()
+    attempts = 0
+    print("Welcome to the Cows and Bulls Game!")
+    print("I have generated a 4-digit number. Try to guess it!")
+
+    while True:
+        guess = input("Enter your guess: ")
+
+        if len(guess) != 4 or not guess.isdigit():
+            print("Invalid input. Please enter a 4-digit number.")
+            continue
+
+        attempts += 1
+        cows, bulls = get_cows_and_bulls(secret_number, guess)
+        print(f"Cows: {cows}, Bulls: {bulls}")
+
+        if cows == 4:
+            print(f"Congratulations! You guessed the correct number {secret_number} in {attempts} attempts.")
+            break
+
+if _name_ == "_main_":
+    cows_and_bulls_game()
