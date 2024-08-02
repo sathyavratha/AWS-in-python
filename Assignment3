@@ -1,0 +1,47 @@
+#Replicating the built-in sum function
+def my_sum(iterable, start=0):
+    total = start
+    for item in iterable:
+        total += item
+    return total
+
+numbers = [1, 2, 3, 4, 5]
+print("Sum of numbers:", my_sum(numbers))  # Output should be 15
+
+print("Sum of numbers with start value 10:", my_sum(numbers, 10))  # Output should be 25
+
+#-	Create a function to replicate string attribute like, ljust(), rjust() 
+def custom_ljust(s, width, fillchar=' '):
+
+    if len(s) >= width:
+        return s
+    return s + fillchar * (width - len(s))
+
+def custom_rjust(s, width, fillchar=' '):
+    if len(s) >= width:
+        return s
+    return fillchar * (width - len(s)) + s
+example_string = "example"
+print(custom_ljust(example_string, 10, '*'))  # Output: "example***"
+print(custom_rjust(example_string, 10, '*'))  # Output: "***example"
+
+
+#Create a function to find, Palindrome, Fibo and Factorials
+
+def is_palindrome(s):
+    return s == s[::-1]
+
+def fibonacci(n):
+    sequence = []
+    a, b = 0, 1
+    for _ in range(n):
+        sequence.append(a)
+        a, b = b, a + b
+    return sequence
+
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n - 1)
+
