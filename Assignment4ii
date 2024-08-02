@@ -1,0 +1,14 @@
+# Given string
+name = "some name"
+
+# Convert to uppercase
+upper_name = name.upper()
+print("Uppercase:", upper_name)
+
+# Convert to lowercase
+lower_name = name.lower()
+print("Lowercase:", lower_name)
+
+# Capitalize the first letter
+capitalized_name = name.capitalize()
+print("Capitalized:", capitalized_name)
