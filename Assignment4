@@ -1,0 +1,30 @@
+# Creating various data types
+integer_value = 10
+float_value = 10.5
+string_value = "Hello, World!"
+list_value = [1, 2, 3, 4, 5]
+tuple_value = (1, 2, 3, 4, 5)
+dict_value = {"a": 1, "b": 2, "c": 3}
+set_value = {1, 2, 3, 4, 5}
+bool_value = True
+
+# Function to explore attributes and methods
+def explore_attributes(data):
+    print(f"Data type: {type(data)}")
+    print(f"Attributes and methods of {type(data)}:")
+    attributes = dir(data)
+    for attribute in attributes:
+        print(attribute)
+    
+    # Use help() to get detailed information about each attribute
+    print("\nDetailed information about each attribute:")
+    for attribute in attributes:
+        print(f"\nAttribute: {attribute}")
+        help(getattr(data, attribute, None))
+
+# Experimenting with each data type
+data_types = [integer_value, float_value, string_value, list_value, tuple_value, dict_value, set_value, bool_value]
+
+for data in data_types:
+    explore_attributes(data)
+    print("\n" + "-"*50 + "\n")
