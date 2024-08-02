@@ -1,0 +1,66 @@
+# Concatenating strings using + operator
+str1 = "Hello, "
+str2 = "world!"
+result = str1 + str2
+print("Concatenated string:", result)  # Output: Hello, world!
+
+# Old-style string formatting
+name = "Alice"
+age = 30
+formatted_string = "Name: %s, Age: %d" % (name, age)
+print("Old-style formatting:", formatted_string)  # Output: Name: Alice, Age: 30
+
+a = 10
+b = 5
+sum = a + b
+print("Addition:", sum)  # Output: Addition: 15
+sub = a - b
+print("Subtraction:", sub)  # Output: Subtraction: 5
+
+a = 10
+b = 5
+result = a * b
+print("Multiplication:", result)  # Output: Multiplication: 50
+div = a / b
+print("Division:", div)  # Output: Division: 2.0
+
+c = 10
+d = 3
+mod = c % d
+print("Modulus:", mod)  # Output: Modulus: 1
+e = 2
+f = 3
+exp = e ** f
+print("Exponentiation:", exp)  # Output: Exponentiation: 8
+
+
+#Assingment operators
+a = 10
+print("Simple Assignment:", a)  # Output: Simple Assignment: 10
+
+b = 10
+b += 5  # Equivalent to b = b + 5
+print("Addition Assignment:", b)  # Output: Addition Assignment: 15
+
+a = 10
+a -= 5  # Equivalent to a = a - 5
+print("Subtraction Assignment:", a)  # Output: Subtraction Assignment: 5
+
+a = 10
+a *= 5  # Equivalent to a = a * 5
+print("Multiplication Assignment:", a)  # Output: Multiplication Assignment: 50
+
+a = 10
+a /= 5  # Equivalent to a = a / 5
+print("Division Assignment:", a)  # Output: Division Assignment: 2.0
+a = 2
+a **= 3  # Equivalent to a = a ** 3
+print("Exponentiation Assignment:", a)  # Output: Exponentiation Assignment: 8
+a = 10
+a %= 3  # Equivalent to a = a % 3
+print("Modulus Assignment:", a)  # Output: Modulus Assignment: 1
+a = 10
+a //= 3  # Equivalent to a = a // 3
+print("Floor Division Assignment:", a)  # Output: Floor Division Assignment: 3
+
+
