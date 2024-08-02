@@ -12,3 +12,7 @@ print("Lowercase:", lower_name)
 # Capitalize the first letter
 capitalized_name = name.capitalize()
 print("Capitalized:", capitalized_name)
+
+# Replace 'e' with 'E'
+replaced_name = name.replace('e', 'E')
+print("Replaced string:", replaced_name)
